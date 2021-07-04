@@ -8,7 +8,7 @@ alias cu="composer update"
 alias cr="composer require"
 alias ci="composer install"
 alias cda="composer dump-autoload -o"
-alias hostfile="sudo vi /etc/hosts"
+alias hostfile="sudo code /etc/hosts"
 alias deploy='envoy run deploy'
 alias deploy-code='envoy run deploy-code'
 alias mfs='php artisan migrate:fresh --seed'
@@ -20,16 +20,27 @@ alias d="php artisan dusk"
 alias sshconfig="vi ~/.ssh/config"
 alias copykey='command cat ~/.ssh/id_rsa.public | pbcopy'
 alias sail='./vendor/bin/sail'
-alias tunnel='valet share -subdomain=freekmurze -region=eu'
+alias tunnel='valet share -subdomain=splintnet -region=eu'
 
 # JavaScript
 alias jest="./node_modules/.bin/jest"
+alias nrw="npm run watch"
+alias nrb="npm run build"
+alias nrp="npm run prod"
+alias nrd="npm run dev"
+alias nrh="npm run hot"
+alias nrpl="npm run prod-local"
 
 # Git
 alias gc="git checkout"
+alias gcl="git clone"
 alias gpo="git push origin"
 alias gm="git merge"
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+# Docker
+alias dc="docker-compose"
+alias dcu="docker-compose up -d"
 
 # Fast open
 alias o="open ."
@@ -54,9 +65,10 @@ alias code='open -a "/Applications/Visual Studio Code.app" "`pwd`"'
 alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
 alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
 
-# IP addresses
+# IP addresses and ports
 alias ip="curl https://diagnostic.opendns.com/myip ; echo"
 alias localip="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
+alias ops="sudo lsof -iTCP -sTCP:LISTEN -n -P"
 
 # Flush Directory Service cache
 alias flushdns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
@@ -76,7 +88,16 @@ alias scrape="scrapeUrl"
 
 # Switch NPM
 alias npmnpm="npm config set registry https://registry.npmjs.org"
-alias npmspatie="npm config set registry https://npm.spatie.be"
+alias npmspl="npm config set registry https://npm.splintnet.com"
+alias npm5="npm config set registry https://npm.5-anker.com"
 
 # Restart touch bar
 alias touchbar="killall ControlStrip"
+
+# Folders
+alias ws="cd ~/Sites"
+alias desk="cd ~/Desktop"
+alias dl="cd ~/Downloads"
+
+# SSH
+alias sshc="ssh-copy-id -i ~/.ssh/id_rsa $1"
