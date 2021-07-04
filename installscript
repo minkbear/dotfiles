@@ -93,6 +93,10 @@ echo 'Install doctl'
 echo '-------------'
 brew install doctl
 
+echo 'Install mas'
+echo '-------------'
+brew install mas
+
 echo 'Install brew-cask'
 echo '-----------------'
 brew tap caskroom/cask
