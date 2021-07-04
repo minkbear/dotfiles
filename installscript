@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Install rosetta
+echo 'Install rosetta'
+/usr/sbin/softwareupdate --install-rosetta --agree-to-license
+xcode-select —install
+
 # Hide "last login" line when starting a new terminal session
 touch $HOME/.hushlogin
 
