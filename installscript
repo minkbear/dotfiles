@@ -10,6 +10,7 @@ rm -rf $HOME/.oh-my-zsh
 curl -L https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 
 # Add global gitignore
+rm $HOME/.global-gitignore
 ln -s $HOME/.dotfiles/shell/.global-gitignore $HOME/.global-gitignore
 git config --global core.excludesfile $HOME/.global-gitignore
 
@@ -26,13 +27,12 @@ ln -s $HOME/.dotfiles/shell/.vim $HOME/.vim
 # Symlink the Mackup config
 ln -s $HOME/.dotfiles/macos/.mackup.cfg $HOME/.mackup.cfg
 
-# Fix missing font characters (see https://github.com/robbyrussell/oh-my-zsh/issues/1906)
-cd ~/.oh-my-zsh/themes/
-git checkout d6a36b1 agnoster.zsh-theme
-
 # Activate z
 cd ~/.dotfiles/shell
 chmod +x z.sh
+
+mkdir -p /usr/local/bin
+sudo chown "${DEFAULT_USER}:admin" /usr/local/bin
 
 echo 'Install composer'
 echo '----------------'
@@ -47,13 +47,14 @@ then
 fi
 php composer-setup.php
 rm composer-setup.php
-mv composer.phar /usr/local/bin/composer
+sudo mv composer.phar /usr/local/bin/composer
 
 echo 'Install homebrew'
 echo '----------------'
 echo install homebrew
-sudo rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+export PATH=/opt/homebrew/bin:$PATH
 
 echo 'Install node'
 echo '------------'
@@ -62,6 +63,7 @@ brew install node@8
 echo 'Configure npm'
 echo '-------------'
 # Create a directory for global packages and tell npm where to store globally installed packages
+rm -rf "${HOME}/.npm-packages"
 mkdir "${HOME}/.npm-packages"
 npm config set prefix "${HOME}/.npm-packages"
 
@@ -104,7 +106,7 @@ brew install brew-cask
 
 echo 'Install some nice quicklook plugins'
 echo '-----------------------------------'
-brew cask install --force qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzip webp-quicklook suspicious-package
+brew install --cask --force qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzip webp-quicklook suspicious-package
 
 echo 'Install php'
 echo '-----------'
@@ -132,17 +134,12 @@ echo 'Install redis'
 echo '-------------'
 pecl install redis
 
+echo 'Set right composer path'
+export PATH="$HOME/.composer/vendor/bin:$PATH"
+
 echo 'Install laravel envoy'
 echo '---------------------'
 composer global require "laravel/envoy=~2.0"
-
-echo 'Install phpunit-watcher'
-echo '-----------------------'
-composer global require spatie/phpunit-watcher
-
-echo 'Install mixed-content-scanner-cli'
-echo '---------------------------------'
-composer global require spatie/mixed-content-scanner-cli
 
 echo 'Install laravel installer'
 echo '---------------------'
@@ -153,10 +150,15 @@ echo '---------------------'
 composer global require laravel/valet
 valet install
 
-echo 'Install mysql'
+echo 'Install mariadb'
 echo '-------------'
-brew install mysql
-brew services start mysql
+brew install mariadb
+brew services start mariadb
+
+echo 'Install redis'
+echo '------------'
+brew install redis
+brew services start redis
 
 echo 'Install yarn'
 echo '------------'

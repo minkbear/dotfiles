@@ -7,7 +7,7 @@ ZSH_CUSTOM=$HOME/.dotfiles/misc/oh-my-zsh-custom
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster"
+ZSH_THEME="robbyrussell"
 
 # Hide username in prompt
 DEFAULT_USER=`whoami`
@@ -60,9 +60,6 @@ unset file
 export PATH="$PATH:$HOME/.rvm/bin"
 . $HOME/.dotfiles/shell/z.sh
 
-# Alias hub to git
-eval "$(hub alias -s)"
-
 # Sudoless npm https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md
 NPM_PACKAGES="${HOME}/.npm-packages"
 export PATH="$PATH:$NPM_PACKAGES/bin"
@@ -77,19 +74,17 @@ export PATH=$HOME/.dotfiles/bin:$PATH
 ssh-add -A 2>/dev/null;
 
 # Setup xdebug
-export XDEBUG_CONFIG="idekey=VSCODE"
+export XDEBUG_CONFIG="idekey=PHPSTORM"
 
 # Enable autosuggestions
-source ~/.dotfiles/misc/oh-my-zsh-custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Extra paths
 export PATH="$HOME/.composer/vendor/bin:$PATH"
+export PATH=/opt/homebrew/bin:$PATH
 export PATH=/usr/local/bin:$PATH
-export PATH="$HOME/.yarn/bin:$PATH"
-export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
-export PATH="/usr/local/opt/node@8/bin:$PATH"
 
-export PATH="/usr/local/opt/node@12/bin:$PATH"
-export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# Alias hub to git
+eval "$(hub alias -s)"
