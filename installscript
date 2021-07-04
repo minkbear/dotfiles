@@ -144,6 +144,10 @@ echo 'Install mixed-content-scanner-cli'
 echo '---------------------------------'
 composer global require spatie/mixed-content-scanner-cli
 
+echo 'Install laravel installer'
+echo '---------------------'
+composer global require laravel/installer
+
 echo 'Install laravel valet'
 echo '---------------------'
 composer global require laravel/valet
@@ -169,6 +173,10 @@ brew install mackup
 echo 'Install zsh-autosuggestions'
 echo '---------------------------'
 brew install zsh-autosuggestions
+
+echo 'Install Vue CLI'
+echo '--------------'
+yarn global add @vue/cli
 
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'
