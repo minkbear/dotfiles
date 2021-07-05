@@ -23,7 +23,6 @@ alias sail='./vendor/bin/sail'
 alias tunnel='valet share -subdomain=splintnet -region=eu'
 
 # JavaScript
-alias jest="./node_modules/.bin/jest"
 alias nrw="npm run watch"
 alias nrb="npm run build"
 alias nrp="npm run prod"
