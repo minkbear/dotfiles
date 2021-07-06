@@ -1,6 +1,6 @@
 # My personal dotfiles
 
-My personal dotfiles.
+My personal dotfiles for an Mac with M1 Chip.
 
 It contains the installation of some basic tools, some handy aliases and functions. Backups of settings are done via [Mackup](https://github.com/lra/mackup).
 
