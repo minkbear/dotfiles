@@ -193,9 +193,9 @@ echo 'Some optional tidbits'
 
 echo '1. Make sure dropbox is running first. If you have not backed up via Mackup yet, then run `mackup backup` to symlink preferences for a wide collection of apps to your dropbox. If you already had a backup via mackup run `mackup restore` You'\''ll find more info on Mackup here: https://github.com/lra/mackup.'
 echo '2. Set some sensible os x defaults by running: $HOME/.dotfiles/macos/set-defaults.sh'
-echo '3. Install some helpful apps by running: $HOME/.dotfiles/macos/apps.sh and $HOME/.dotfiles/macos/store-apps.sh'
+echo '3. Install some helpful apps by running: $HOME/.dotfiles/macos/apps.sh'
 echo '4. Make a .dotfiles-custom/shell/.aliases for your personal commands'
-echo '5. VirtualBox, Office 365 and Adobe Creative Cloud can not be installed automatically. Please do to manually if you want to.'
+echo '5. Office 365, Cloudya and Sonos can not be installed automatically. Please do to manually if you want to.'
 
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'

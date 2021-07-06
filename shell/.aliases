@@ -30,6 +30,10 @@ alias nrd="npm run dev"
 alias nrh="npm run hot"
 alias nrpl="npm run prod-local"
 
+alias ys="yarn serve"
+alias yd="yarn dev"
+alias yb="yarn build"
+
 # Git
 alias gc="git checkout"
 alias gcl="git clone"
@@ -48,7 +52,7 @@ alias o="open ."
 alias l="ls -laF"
 
 # PhpStorm
-alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
+alias phpstorm='open -a /Applications/PhpStorm.app'
 
 # PHP
 alias switch-php80="brew unlink php@7.4 && brew link --overwrite --force php"
@@ -58,7 +62,7 @@ alias switch-php74="brew unlink php && brew link --overwrite --force php@7.4"
 alias flush-redis="redis-cli FLUSHALL"
 
 # VSCode
-alias code='open -a "/Applications/Visual Studio Code.app" "`pwd`"'
+# alias code='open -a "/Applications/Visual Studio Code.app"'
 
 # Show/hide hidden files in Finder
 alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
@@ -94,9 +98,13 @@ alias npm5="npm config set registry https://npm.5-anker.com"
 alias touchbar="killall ControlStrip"
 
 # Folders
-alias ws="cd ~/Sites"
+alias c="cd ~/Code"
+alias ws="cd ~/Code/Sites"
 alias desk="cd ~/Desktop"
 alias dl="cd ~/Downloads"
 
 # SSH
 alias sshc="ssh-copy-id -i ~/.ssh/id_rsa $1"
+
+# Other
+alias untar="tar -xvf"
