@@ -157,6 +157,11 @@ echo '------------'
 brew install redis
 brew services start redis
 
+echo 'Install mailhog'
+echo '------------'
+brew install mailhog
+brew services start mailhog
+
 echo 'Install yarn'
 echo '------------'
 brew install yarn
