@@ -16,10 +16,11 @@ mas install 425424353 # Unarchiver
 mas install 1147396723 # Whatsapp
 mas install 595191960 # CopyClip
 mas install 1518425043 # Boop
-mas install 497799835 # xCode
 mas install 409201541 # Pages
 mas install 409183694 # Keynote
 mas install 409203825 # Numbers
+mas install 806101067 # QVR Client
+mas install 497799835 # xCode
 
 brew install --cask skype
 brew install --cask tower
