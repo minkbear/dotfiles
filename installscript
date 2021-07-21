@@ -97,6 +97,10 @@ echo 'Install mas'
 echo '-------------'
 brew install mas
 
+echo 'Install image converters'
+echo '-------------'
+brew install jpegoptim optipng pngquant svgo gifsicle webp
+
 echo 'Install brew-cask'
 echo '-----------------'
 brew tap caskroom/cask
@@ -174,9 +178,17 @@ echo 'Install mackup'
 echo '--------------'
 brew install mackup
 
+echo 'Install watchman'
+echo '--------------'
+brew install watchman
+
 echo 'Install zsh-autosuggestions'
 echo '---------------------------'
 brew install zsh-autosuggestions
+
+echo 'Install cocoapods'
+echo '--------------'
+brew install cocoapods
 
 echo 'Install Vue CLI'
 echo '--------------'
@@ -189,6 +201,14 @@ yarn global add pnpm
 echo 'Install jest'
 echo '--------------'
 yarn global add jest
+
+echo 'Install expo-cli'
+echo '--------------'
+npm install --global expo-cli
+
+echo 'Install Google Fonts'
+echo '--------------'
+cd ~/Library/Fonts/ && hub.com/google/fonts.git google-fonts && cd -
 
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'
