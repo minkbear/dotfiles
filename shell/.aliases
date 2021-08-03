@@ -52,7 +52,7 @@ alias o="open ."
 alias l="ls -laF"
 
 # PhpStorm
-alias phpstorm='open -a /Applications/PhpStorm.app'
+alias pstorm='phpstorm'
 
 # PHP
 alias switch-php80="brew unlink php@7.4 && brew link --overwrite --force php"

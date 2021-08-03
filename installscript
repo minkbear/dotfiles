@@ -166,6 +166,10 @@ echo '------------'
 brew install mailhog
 brew services start mailhog
 
+echo 'Install thefuck'
+echo '------------'
+brew install thefuck
+
 echo 'Install yarn'
 echo '------------'
 brew install yarn
