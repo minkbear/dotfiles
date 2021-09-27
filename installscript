@@ -77,6 +77,10 @@ echo 'Install httpie'
 echo '--------------'
 brew install httpie
 
+echo 'Install Git LFS'
+echo '--------------'
+brew install git-lfs && git lfs install
+
 echo 'Install ncdu'
 echo '------------'
 brew install ncdu
@@ -173,6 +177,10 @@ echo 'Install thefuck'
 echo '------------'
 brew install thefuck
 
+echo 'Install python'
+echo '------------'
+brew install python
+
 echo 'Install yarn'
 echo '------------'
 brew install yarn
@@ -199,7 +207,7 @@ brew install cocoapods
 
 echo 'Install Vue CLI'
 echo '--------------'
-yarn global add @vue/cli
+yarn global add @vue/cli-init
 
 echo 'Install pnpm'
 echo '--------------'
@@ -216,6 +224,12 @@ npm install --global expo-cli
 echo 'Install Google Fonts'
 echo '--------------'
 cd ~/Library/Fonts/ && hub.com/google/fonts.git google-fonts && cd -
+
+echo 'Install mkdocs'
+echo '--------------'
+pip3 install mkdocs && pip3 install mkdocs-material
+
+
 
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'
