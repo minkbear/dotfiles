@@ -55,7 +55,7 @@ done
 unset file
 
 # Load rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 export PATH="$PATH:$HOME/.rvm/bin"
 . $HOME/.dotfiles/shell/z.sh
@@ -88,3 +88,4 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Alias hub to git
 eval "$(hub alias -s)"
+eval $(thefuck --alias)
