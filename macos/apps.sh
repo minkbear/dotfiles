@@ -45,3 +45,6 @@ brew install --cask imageoptim
 brew install --cask virtualbox
 brew install --cask adobe-creative-cloud
 brew install --cask zoom
+brew install --cask mongodb-compass
+brew install --cask signal
+brew install --cask parallels
