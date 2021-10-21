@@ -229,6 +229,10 @@ echo 'Install mkdocs'
 echo '--------------'
 pip3 install mkdocs && pip3 install mkdocs-material
 
+echo 'Install PHPCS'
+echo '--------------'
+brew install php-code-sniffer
+phpcs --config-set installed_paths ~/.dotfiles/phpcs
 
 
 echo '++++++++++++++++++++++++++++++'
