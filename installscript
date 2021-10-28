@@ -197,9 +197,9 @@ echo 'Install watchman'
 echo '--------------'
 brew install watchman
 
-echo 'Install zsh-autosuggestions'
+echo 'Install zsh plugins: autosuggestions, autojump'
 echo '---------------------------'
-brew install zsh-autosuggestions
+brew install zsh-autosuggestions autojump
 
 echo 'Install cocoapods'
 echo '--------------'

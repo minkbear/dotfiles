@@ -15,7 +15,7 @@ DEFAULT_USER=`whoami`
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git laravel4 laravel5 composer osx vagrant)
+plugins=(git artisan laravel5 composer osx vagrant)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -78,6 +78,9 @@ export XDEBUG_CONFIG="idekey=PHPSTORM"
 
 # Enable autosuggestions
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Enable autojump
+[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
 
 # Extra paths
 export PATH="$HOME/.composer/vendor/bin:$PATH"
