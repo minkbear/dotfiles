@@ -99,6 +99,11 @@ echo '-----------'
 brew install php@7.4
 brew install php@8.0
 
+export PATH="/opt/homebrew/opt/php@7.4/bin:$PATH"
+export PATH="/opt/homebrew/opt/php@7.4/sbin:$PATH"
+export PATH="/opt/homebrew/opt/php@8.0/bin:$PATH"
+export PATH="/opt/homebrew/opt/php@8.0/sbin:$PATH"
+
 echo 'Install composer'
 echo '----------------'
 EXPECTED_COMPOSER_CHECKSUM="$(curl https://composer.github.io/installer.sig)"
@@ -149,6 +154,7 @@ echo 'Install laravel valet'
 echo '---------------------'
 composer global require laravel/valet
 valet install
+valet use php@8.0
 
 ln -s $HOME/.dotfiles/misc/php-limits.ini /opt/homebrew/etc/php/7.4/conf.d/php-z-custom-limits.ini
 ln -s $HOME/.dotfiles/misc/php-limits.ini /opt/homebrew/etc/php/8.0/conf.d/php-z-custom-limits.ini

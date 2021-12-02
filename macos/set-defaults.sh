@@ -198,7 +198,7 @@ defaults write com.apple.dock tilesize -int 72
 # Wipe all (default) app icons from the Dock
 # This is only really useful when setting up a new Mac, or if you don’t use
 # the Dock to launch apps.
-defaults write com.apple.dock persistent-apps -array ""
+# defaults write com.apple.dock persistent-apps -array ""
 
 # Disable Dashboard
 # defaults write com.apple.dashboard mcx-disabled -bool true
@@ -274,7 +274,7 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 
 for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
 	"Dock" "Finder" "Mail" "Messages" "Safari" "SizeUp" "SystemUIServer" \
-	"Terminal" "Transmission" "Twitter" "iCal"; do
+	"Transmission" "Twitter" "iCal" "Terminal"; do
 	killall "${app}" > /dev/null 2>&1
 done
 echo "Done. Note that some of these changes require a logout/restart to take effect."
