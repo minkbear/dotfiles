@@ -39,31 +39,16 @@ chmod +x z.sh
 mkdir -p /usr/local/bin
 sudo chown "${DEFAULT_USER}:admin" /usr/local/bin
 
-echo 'Install composer'
-echo '----------------'
-EXPECTED_COMPOSER_CHECKSUM="$(curl https://composer.github.io/installer.sig)"
-php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-ACTUAL_COMPOSER_CHECKSUM="$(php -r "echo hash_file('sha384', 'composer-setup.php');")"
-if [ "$EXPECTED_COMPOSER_CHECKSUM" != "$ACTUAL_COMPOSER_CHECKSUM" ]
-then
-    >&2 echo 'ERROR: Invalid installer checksum'
-    rm composer-setup.php
-    exit 1
-fi
-php composer-setup.php
-rm composer-setup.php
-sudo mv composer.phar /usr/local/bin/composer
-
 echo 'Install homebrew'
 echo '----------------'
 echo install homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-
-export PATH=/opt/homebrew/bin:$PATH
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/jonas/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 echo 'Install node'
 echo '------------'
-brew install node@8
+brew install node
 
 echo 'Install pkg-config'
 echo '------------------'
@@ -71,7 +56,7 @@ brew install pkg-config
 
 echo 'Install wget'
 echo '------------'
-brew install wget --overwrite
+brew install wget
 
 echo 'Install httpie'
 echo '--------------'
@@ -105,11 +90,6 @@ echo 'Install image converters'
 echo '-------------'
 brew install jpegoptim optipng pngquant svgo gifsicle webp
 
-echo 'Install brew-cask'
-echo '-----------------'
-brew tap caskroom/cask
-brew install brew-cask
-
 echo 'Install some nice quicklook plugins'
 echo '-----------------------------------'
 brew install --cask --force qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzip WebPQuickLook suspicious-package
@@ -118,6 +98,21 @@ echo 'Install php'
 echo '-----------'
 brew install php@7.4
 brew install php@8.0
+
+echo 'Install composer'
+echo '----------------'
+EXPECTED_COMPOSER_CHECKSUM="$(curl https://composer.github.io/installer.sig)"
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+ACTUAL_COMPOSER_CHECKSUM="$(php -r "echo hash_file('sha384', 'composer-setup.php');")"
+if [ "$EXPECTED_COMPOSER_CHECKSUM" != "$ACTUAL_COMPOSER_CHECKSUM" ]
+then
+    >&2 echo 'ERROR: Invalid installer checksum'
+    rm composer-setup.php
+    exit 1
+fi
+php composer-setup.php
+rm composer-setup.php
+sudo mv composer.phar /usr/local/bin/composer
 
 echo 'Install imagemagick'
 echo '-------------------'
