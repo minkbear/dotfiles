@@ -164,6 +164,8 @@ echo '-------------'
 brew install mariadb
 brew services start mariadb
 
+ln -s $HOME/.dotfiles/misc/my.cnf /opt/homebrew/etc/my.cnf.d/custom.cnf
+
 echo 'Install redis'
 echo '------------'
 brew install redis
