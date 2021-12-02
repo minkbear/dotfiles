@@ -223,7 +223,7 @@ npm install --global expo-cli
 
 echo 'Install Google Fonts'
 echo '--------------'
-cd ~/Library/Fonts/ && hub.com/google/fonts.git google-fonts && cd -
+cd ~/Library/Fonts/ && git clone https://github.com/google/fonts.git google-fonts && cd -
 
 echo 'Install mkdocs'
 echo '--------------'
