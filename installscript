@@ -90,9 +90,9 @@ echo 'Install image converters'
 echo '-------------'
 brew install jpegoptim optipng pngquant svgo gifsicle webp
 
-echo 'Install some nice quicklook plugins'
-echo '-----------------------------------'
-brew install --cask --force qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzip WebPQuickLook suspicious-package
+# echo 'Install some nice quicklook plugins'
+# echo '-----------------------------------'
+# brew install --cask --force qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzip WebPQuickLook suspicious-package
 
 echo 'Install php'
 echo '-----------'
