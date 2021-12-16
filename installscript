@@ -200,6 +200,10 @@ echo 'Install watchman'
 echo '--------------'
 brew install watchman
 
+echo 'Install ngrok'
+echo '--------------'
+brew install ngrok/ngrok/ngrok
+
 echo 'Install zsh plugins: autosuggestions, autojump'
 echo '---------------------------'
 brew install zsh-autosuggestions autojump
@@ -236,6 +240,10 @@ echo 'Install PHPCS'
 echo '--------------'
 brew install php-code-sniffer
 phpcs --config-set installed_paths ~/.dotfiles/phpcs
+
+echo 'Init Git'
+git config --global init.defaultBranch main
+git config --global push.default current
 
 
 echo '++++++++++++++++++++++++++++++'
