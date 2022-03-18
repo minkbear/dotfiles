@@ -109,3 +109,5 @@ alias sshc="ssh-copy-id -i ~/.ssh/id_rsa $1"
 # Other
 alias star="tar -cvf"
 alias untar="tar -xvf"
+
+alias cm="ts-node ~/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts"

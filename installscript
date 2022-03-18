@@ -104,6 +104,8 @@ export PATH="/opt/homebrew/opt/php@7.4/sbin:$PATH"
 export PATH="/opt/homebrew/opt/php@8.0/bin:$PATH"
 export PATH="/opt/homebrew/opt/php@8.0/sbin:$PATH"
 
+# export PATH="/Users/jonas/.local/share/solana/install/active_release/bin:$PATH"
+
 echo 'Install composer'
 echo '----------------'
 EXPECTED_COMPOSER_CHECKSUM="$(curl https://composer.github.io/installer.sig)"
@@ -244,6 +246,9 @@ phpcs --config-set installed_paths ~/.dotfiles/phpcs
 echo 'Init Git'
 git config --global init.defaultBranch main
 git config --global push.default current
+
+echo 'Install NVM'
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
 
 echo '++++++++++++++++++++++++++++++'

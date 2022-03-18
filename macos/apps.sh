@@ -47,3 +47,4 @@ brew install --cask mongodb-compass
 brew install --cask signal
 brew install --cask parallels
 brew install --cask microsoft-teams
+brew install --cask omnidisksweeper
