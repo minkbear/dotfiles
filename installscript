@@ -88,7 +88,7 @@ brew install mas
 
 echo 'Install image converters'
 echo '-------------'
-brew install jpegoptim optipng pngquant svgo gifsicle webp
+brew install jpegoptim optipng pngquant svgo gifsicle webp cairo pango libpng jpeg giflib librsvg
 
 # echo 'Install some nice quicklook plugins'
 # echo '-----------------------------------'
@@ -103,8 +103,6 @@ export PATH="/opt/homebrew/opt/php@7.4/bin:$PATH"
 export PATH="/opt/homebrew/opt/php@7.4/sbin:$PATH"
 export PATH="/opt/homebrew/opt/php@8.0/bin:$PATH"
 export PATH="/opt/homebrew/opt/php@8.0/sbin:$PATH"
-
-# export PATH="/Users/jonas/.local/share/solana/install/active_release/bin:$PATH"
 
 echo 'Install composer'
 echo '----------------'
