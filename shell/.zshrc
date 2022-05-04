@@ -85,11 +85,6 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Extra paths
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
-#export PATH=/opt/homebrew/anaconda3/bin:$PATH
-export PATH="/opt/homebrew/opt/php@7.4/bin:$PATH"
-export PATH="/opt/homebrew/opt/php@7.4/sbin:$PATH"
-export PATH="/opt/homebrew/opt/php@8.0/bin:$PATH"
-export PATH="/opt/homebrew/opt/php@8.0/sbin:$PATH"
 export PATH=/usr/local/bin:$PATH
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi

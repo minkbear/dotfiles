@@ -46,9 +46,13 @@ echo install homebrew
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+echo 'Install NVM'
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+
 echo 'Install node'
 echo '------------'
-brew install node
+nvm install 18
+nvm use 18
 
 echo 'Install pkg-config'
 echo '------------------'
@@ -61,10 +65,6 @@ brew install wget
 echo 'Install httpie'
 echo '--------------'
 brew install httpie
-
-echo 'Install Git LFS'
-echo '--------------'
-brew install git-lfs && git lfs install
 
 echo 'Install ncdu'
 echo '------------'
@@ -96,13 +96,10 @@ brew install jpegoptim optipng pngquant svgo gifsicle webp cairo pango libpng jp
 
 echo 'Install php'
 echo '-----------'
-brew install php@7.4
-brew install php@8.0
+brew install php
 
-export PATH="/opt/homebrew/opt/php@7.4/bin:$PATH"
-export PATH="/opt/homebrew/opt/php@7.4/sbin:$PATH"
-export PATH="/opt/homebrew/opt/php@8.0/bin:$PATH"
-export PATH="/opt/homebrew/opt/php@8.0/sbin:$PATH"
+export PATH="/opt/homebrew/opt/php/bin:$PATH"
+export PATH="/opt/homebrew/opt/php/sbin:$PATH"
 
 echo 'Install composer'
 echo '----------------'
@@ -154,10 +151,8 @@ echo 'Install laravel valet'
 echo '---------------------'
 composer global require laravel/valet
 valet install
-valet use php@8.0
 
-ln -s $HOME/.dotfiles/misc/php-limits.ini /opt/homebrew/etc/php/7.4/conf.d/php-z-custom-limits.ini
-ln -s $HOME/.dotfiles/misc/php-limits.ini /opt/homebrew/etc/php/8.0/conf.d/php-z-custom-limits.ini
+ln -s $HOME/.dotfiles/misc/php-limits.ini /opt/homebrew/etc/php/8.1/conf.d/php-z-custom-limits.ini
 
 echo 'Install mariadb'
 echo '-------------'
@@ -244,9 +239,6 @@ phpcs --config-set installed_paths ~/.dotfiles/phpcs
 echo 'Init Git'
 git config --global init.defaultBranch main
 git config --global push.default current
-
-echo 'Install NVM'
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
 
 echo '++++++++++++++++++++++++++++++'

@@ -74,13 +74,13 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 ###############################################################################
 
 # Increase sound quality for Bluetooth headphones/headsets
-defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Max (editable)" 80
-defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" 80
-defaults write com.apple.BluetoothAudioAgent "Apple Initial Bitpool (editable)" 80
-defaults write com.apple.BluetoothAudioAgent "Apple Initial Bitpool Min (editable)" 80
-defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool" 80
-defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool Max" 80
-defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool Min" 80
+#defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Max (editable)" 80
+#defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" 80
+#defaults write com.apple.BluetoothAudioAgent "Apple Initial Bitpool (editable)" 80
+#defaults write com.apple.BluetoothAudioAgent "Apple Initial Bitpool Min (editable)" 80
+#defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool" 80
+#defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool Max" 80
+#defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool Min" 80
 
 # Enable full keyboard access for all controls
 # (e.g. enable Tab in modal dialogs)
@@ -204,7 +204,7 @@ defaults write com.apple.dock tilesize -int 72
 # defaults write com.apple.dashboard mcx-disabled -bool true
 
 # Don’t show Dashboard as a Space
-defaults write com.apple.dock dashboard-in-overlay -bool true
+#defaults write com.apple.dock dashboard-in-overlay -bool true
 
 # Don’t automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
@@ -238,7 +238,7 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
 
 # Visualize CPU usage in the Activity Monitor Dock icon
-defaults write com.apple.ActivityMonitor IconType -int 5
+#defaults write com.apple.ActivityMonitor IconType -int 5
 
 # Show all processes in Activity Monitor
 defaults write com.apple.ActivityMonitor ShowCategory -int 0
