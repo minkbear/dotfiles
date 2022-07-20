@@ -84,7 +84,7 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
 # Enable full keyboard access for all controls
 # (e.g. enable Tab in modal dialogs)
-defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+# defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
 # Set language and text formats
 # Note: if you’re in the US, replace `EUR` with `USD`, `Centimeters` with
@@ -159,7 +159,7 @@ defaults write com.apple.finder WarnOnEmptyTrash -bool false
 # Show the ~/Library folder
 chflags nohidden ~/Library
 
-# Show the ~/Users folder
+# Show the /Users folder
 chflags nohidden /Users
 
 # Expand the following File Info panes:
@@ -263,10 +263,10 @@ defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
 ###############################################################################
 
 # Disable smart quotes as it’s annoying for messages that contain code
-defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticQuoteSubstitutionEnabled" -bool false
+# defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticQuoteSubstitutionEnabled" -bool false
 
 # Disable continuous spell checking
-defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "continuousSpellCheckingEnabled" -bool false
+# defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "continuousSpellCheckingEnabled" -bool false
 
 ###############################################################################
 # Kill affected applications                                                  #

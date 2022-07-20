@@ -87,6 +87,9 @@ export PATH="$HOME/.composer/vendor/bin:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 
+export UID=$(id -u)
+export GID=$(id -g)
+
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Alias hub to git
