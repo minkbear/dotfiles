@@ -16,7 +16,7 @@ alias nah='git reset --hard;git clean -df'
 
 alias pp="php artisan test --parallel"
 alias d="php artisan dusk"
-alias sshconfig="vi ~/.ssh/config"
+alias config="vi ~/.ssh/config"
 alias copykey='command cat ~/.ssh/id_rsa.public | pbcopy'
 alias sail='./vendor/bin/sail'
 alias tunnel='valet share -subdomain=splintnet -region=eu'
@@ -33,11 +33,17 @@ alias ys="yarn serve"
 alias yd="yarn dev"
 alias yb="yarn build"
 
+alias pn="pnpm"
+alias pns="yarn serve"
+alias pnd="yarn dev"
+alias pnb="yarn build"
+
 # Git
 alias gc="git checkout"
 alias gcl="git clone"
 alias gpo="git push origin"
 alias gm="git merge"
+alias gnf="git checkout -b feature/"
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
 # Docker
@@ -98,7 +104,7 @@ alias touchbar="killall ControlStrip"
 
 # Folders
 alias c="cd ~/Code"
-alias ws="cd ~/Code/Sites"
+alias ws="cd ~/Sites"
 alias desk="cd ~/Desktop"
 alias dl="cd ~/Downloads"
 

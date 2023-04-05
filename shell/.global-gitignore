@@ -17,7 +17,7 @@ Thumbs.db
 .php_cs.cache
 
 # vs code
-.vscode
+#.vscode
 
 # Sublime Text
 *.sublime-project
