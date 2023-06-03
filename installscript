@@ -82,6 +82,10 @@ echo 'Install ack'
 echo '-----------'
 brew install ack
 
+echo 'Install wrk'
+echo '-----------'
+brew install wrk
+
 echo 'Install doctl'
 echo '-------------'
 brew install doctl
