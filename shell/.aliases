@@ -7,6 +7,7 @@ alias ar="php artisan remote"
 alias c="composer"
 alias cu="composer update"
 alias cr="composer require"
+alias crm="composer remove"
 alias ci="composer install"
 alias cda="composer dump-autoload -o"
 alias hostfile="sudo code /etc/hosts"
@@ -28,7 +29,6 @@ alias nrb="npm run build"
 alias nrp="npm run prod"
 alias nrd="npm run dev"
 alias nrh="npm run hot"
-alias nrpl="npm run prod-local"
 
 alias ys="yarn serve"
 alias yd="yarn dev"
@@ -60,10 +60,6 @@ alias l="ls -laF"
 # PhpStorm
 alias pstorm='phpstorm'
 
-# PHP
-alias switch-php80="brew unlink php@7.4 && brew link --overwrite --force php"
-alias switch-php74="brew unlink php && brew link --overwrite --force php@7.4"
-
 # Redis
 alias flush-redis="redis-cli FLUSHALL"
 
@@ -92,16 +88,14 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
+# Brew for x86
+alias ibrew="arch -x86_64 /usr/local/bin/brew"
+
+# Run in x86
+alias x86="arch -x86_64"
+
 # Scape webpage
 alias scrape="scrapeUrl"
-
-# Switch NPM
-alias npmnpm="npm config set registry https://registry.npmjs.org"
-alias npmspl="npm config set registry https://npm.splintnet.com"
-alias npm5="npm config set registry https://npm.5-anker.com"
-
-# Restart touch bar
-alias touchbar="killall ControlStrip"
 
 # Folders
 alias c="cd ~/Code"
@@ -116,4 +110,5 @@ alias sshc="ssh-copy-id -i ~/.ssh/id_rsa $1"
 alias star="tar -cvf"
 alias untar="tar -xvf"
 
-alias cm="ts-node ~/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts"
+# Global updates
+alias update="composer global update && npm update -g && yarn global upgrade && brew update && brew upgrade && brew cleanup && brew doctor && valet install && valet trust && valet restart"

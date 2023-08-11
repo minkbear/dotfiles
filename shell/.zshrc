@@ -10,7 +10,7 @@ ZSH_CUSTOM=$HOME/.dotfiles/misc/oh-my-zsh-custom
 ZSH_THEME="robbyrussell"
 
 # Hide username in prompt
-DEFAULT_USER=`whoami`
+DEFAULT_USER=$(whoami)
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -46,11 +46,11 @@ bindkey -s "^[Oo" "/"
 # Load the shell dotfiles, and then some:
 # * ~/.dotfiles-custom can be used for other settings you don’t want to commit.
 for file in ~/.dotfiles/shell/.{exports,aliases,functions}; do
-	[ -r "$file" ] && [ -f "$file" ] && source "$file"
+    [ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
 
 for file in ~/.dotfiles-custom/shell/.{exports,aliases,functions,zshrc}; do
-	[ -r "$file" ] && [ -f "$file" ] && source "$file"
+    [ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
 unset file
 
@@ -71,7 +71,7 @@ export PATH=$HOME/.dotfiles/bin:$PATH
 [[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
 
 # Import ssh keys in keychain
-ssh-add -A 2>/dev/null;
+ssh-add -A 2>/dev/null
 
 # Setup xdebug
 export XDEBUG_CONFIG="idekey=PHPSTORM"
@@ -84,24 +84,28 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Extra paths
 export PATH="$HOME/.composer/vendor/bin:$PATH"
-export PATH=/opt/homebrew/bin:$PATH
 export PATH=/usr/local/bin:$PATH
+export PATH=/opt/homebrew/bin:$PATH
+export PATH=/Users/jonas/Library/Python/3.11/bin:$PATH
 
 export UID=$(id -u)
 export GID=$(id -g)
 
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+if which rbenv >/dev/null; then eval "$(rbenv init -)"; fi
 
 # Alias hub to git
 eval "$(hub alias -s)"
 eval $(thefuck --alias)
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 # Ruby
 if [ -d "/opt/homebrew/opt/ruby/bin" ]; then
-  export PATH=/opt/homebrew/opt/ruby/bin:$PATH
-  export PATH=`gem environment gemdir`/bin:$PATH
+    export PATH=/opt/homebrew/opt/ruby/bin:$PATH
+    export PATH=$(gem environment gemdir)/bin:$PATH
 fi
+
+# Ansible
+export ANSIBLE_VAULT_PASSWORD_FILE=./.vaultpw
