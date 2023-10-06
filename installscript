@@ -175,8 +175,8 @@ brew services start redis
 
 echo 'Install mailhog'
 echo '------------'
-brew install mailhog
-brew services start mailhog
+brew install mailpit
+brew services start mailpit
 
 echo 'Install thefuck'
 echo '------------'
@@ -210,6 +210,10 @@ echo 'Install k9s kubernetes'
 echo '--------------'
 brew install derailed/k9s/k9s kubectl helm
 
+echo 'Install minikube'
+echo '--------------'
+brew install minikube
+
 echo 'Install ngrok'
 echo '--------------'
 brew install ngrok/ngrok/ngrok
@@ -227,6 +231,19 @@ echo 'Install cocoapods'
 echo '--------------'
 brew install cocoapods
 
+echo 'Install terraform'
+echo '--------------'
+brew tap hashicorp/tap
+brew install hashicorp/tap/terraform
+
+echo 'Install packer'
+echo '--------------'
+brew install hashicorp/tap/packer
+
+echo 'Install ansible'
+echo '--------------'
+brew install ansible
+
 echo 'Install Vue CLI'
 echo '--------------'
 yarn global add @vue/cli-init
@@ -234,10 +251,6 @@ yarn global add @vue/cli-init
 echo 'Install Google Fonts'
 echo '--------------'
 cd ~/Library/Fonts/ && git clone https://github.com/google/fonts.git google-fonts && cd -
-
-echo 'Install mkdocs'
-echo '--------------'
-pip3 install mkdocs && pip3 install mkdocs-material
 
 echo 'Install PHPCS'
 echo '--------------'
