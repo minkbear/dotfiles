@@ -105,6 +105,7 @@ alias dl="cd ~/Downloads"
 
 # SSH
 alias sshc="ssh-copy-id -i ~/.ssh/id_rsa $1"
+alias sshr="ssh-keygen -R $1"
 
 # Other
 alias star="tar -cvf"

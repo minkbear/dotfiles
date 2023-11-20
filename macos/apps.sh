@@ -44,3 +44,5 @@ brew install --cask parallels
 brew install --cask omnidisksweeper
 brew install --cask notion
 brew install --cask asana
+brew install --cask battle-net
+brew install --cask nordvpn
