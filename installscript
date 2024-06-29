@@ -148,16 +148,7 @@ export PATH="$HOME/.composer/vendor/bin:$PATH"
 
 echo 'Install laravel envoy'
 echo '---------------------'
-composer global require "laravel/envoy=~2.0"
-
-echo 'Install laravel installer'
-echo '---------------------'
-composer global require laravel/installer
-
-echo 'Install laravel valet'
-echo '---------------------'
-composer global require laravel/valet
-valet install
+composer global require "laravel/envoy"
 
 ln -s $HOME/.dotfiles/misc/php-limits.ini /opt/homebrew/etc/php/8.3/conf.d/php-z-custom-limits.ini
 

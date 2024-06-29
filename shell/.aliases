@@ -21,7 +21,6 @@ alias d="php artisan dusk"
 alias config="vi ~/.ssh/config"
 alias copykey='command cat ~/.ssh/id_rsa.public | pbcopy'
 alias sail='./vendor/bin/sail'
-alias tunnel='valet share -subdomain=splintnet -region=eu'
 
 # JavaScript
 alias nrw="npm run watch"
@@ -112,4 +111,4 @@ alias star="tar -cvf"
 alias untar="tar -xvf"
 
 # Global updates
-alias update="composer global update && npm update -g && yarn global upgrade && brew update && brew upgrade && brew cleanup && brew doctor && valet install && valet trust && valet restart"
+alias update="composer global update && npm update -g && brew update && brew upgrade && brew cleanup && brew doctor"
