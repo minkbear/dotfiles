@@ -23,20 +23,7 @@ alias copykey='command cat ~/.ssh/id_rsa.public | pbcopy'
 alias sail='./vendor/bin/sail'
 
 # JavaScript
-alias nrw="npm run watch"
-alias nrb="npm run build"
-alias nrp="npm run prod"
-alias nrd="npm run dev"
-alias nrh="npm run hot"
-
-alias ys="yarn serve"
-alias yd="yarn dev"
-alias yb="yarn build"
-
 alias pn="pnpm"
-alias pns="yarn serve"
-alias pnd="yarn dev"
-alias pnb="yarn build"
 
 # Git
 alias gc="git checkout"
