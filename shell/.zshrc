@@ -108,5 +108,9 @@ if [ -d "/opt/homebrew/opt/ruby/bin" ]; then
     export PATH=$(gem environment gemdir)/bin:$PATH
 fi
 
+if [ -d "$HOME/flutter/bin" ]; then
+    export PATH="$HOME/flutter/bin:$PATH"
+fi
+
 # Ansible
 export ANSIBLE_VAULT_PASSWORD_FILE=./.vaultpw

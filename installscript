@@ -220,7 +220,7 @@ mkcert -install
 
 echo 'Install cocoapods'
 echo '--------------'
-brew install cocoapods
+sudo gem install cocoapods
 
 echo 'Install terraform'
 echo '--------------'
