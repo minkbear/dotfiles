@@ -47,7 +47,7 @@ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >>$HOME/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 echo 'Install NVM'
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
@@ -164,7 +164,7 @@ echo '------------'
 brew install redis
 brew services start redis
 
-echo 'Install mailhog'
+echo 'Install mailpit'
 echo '------------'
 brew install mailpit
 brew services start mailpit
@@ -180,10 +180,6 @@ brew install ruby
 echo 'Install python'
 echo '------------'
 brew install python
-
-echo 'Install yarn'
-echo '------------'
-brew install yarn
 
 echo 'Install ghostscript'
 echo '-------------------'
@@ -205,9 +201,9 @@ echo 'Install minikube'
 echo '--------------'
 brew install minikube
 
-echo 'Install ngrok'
+echo 'Install localtunnel'
 echo '--------------'
-brew install ngrok/ngrok/ngrok
+brew install localtunnel
 
 echo 'Install zsh plugins: autosuggestions, autojump'
 echo '---------------------------'

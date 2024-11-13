@@ -114,3 +114,4 @@ fi
 
 # Ansible
 export ANSIBLE_VAULT_PASSWORD_FILE=./.vaultpw
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
