@@ -123,67 +123,22 @@ php composer-setup.php
 rm composer-setup.php
 sudo mv composer.phar /usr/local/bin/composer
 
-echo 'Install imagemagick'
-echo '-------------------'
-brew install imagemagick
-
-echo 'Install imagick'
-echo '---------------'
-pecl install imagick
-
-echo 'Install memcached'
-echo '-----------------'
-pecl install memcached
-
-echo 'Install xdebug'
-echo '--------------'
-pecl install xdebug
-
-echo 'Install redis'
-echo '-------------'
-pecl install redis
-
 echo 'Set right composer path'
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 
-echo 'Install laravel envoy'
-echo '---------------------'
-composer global require "laravel/envoy"
-
 ln -s $HOME/.dotfiles/misc/php-limits.ini /opt/homebrew/etc/php/8.3/conf.d/php-z-custom-limits.ini
 
-echo 'Install mariadb'
-echo '-------------'
-brew install mariadb
-brew services start mariadb
+echo 'Install Deployer 7'
+echo '--------------'
+curl -LO https://github.com/deployphp/deployer/releases/download/v7.5.5/deployer.phar
+mv deployer.phar /usr/local/bin/dep7
+chmod +x /usr/local/bin/dep7
 
-ln -s $HOME/.dotfiles/misc/my.cnf /opt/homebrew/etc/my.cnf.d/custom.cnf
-
-echo 'Install redis'
-echo '------------'
-brew install redis
-brew services start redis
-
-echo 'Install mailpit'
-echo '------------'
-brew install mailpit
-brew services start mailpit
-
-echo 'Install thefuck'
-echo '------------'
-brew install thefuck
-
-echo 'Install thefuck'
-echo '------------'
-brew install ruby
-
-echo 'Install python'
-echo '------------'
-brew install python
-
-echo 'Install ghostscript'
-echo '-------------------'
-brew install ghostscript
+echo 'Install Deployer 6'
+echo '--------------'
+curl -LO https://deployer.org/deployer.phar
+mv deployer.phar /usr/local/bin/dep
+chmod +x /usr/local/bin/dep
 
 echo 'Install mackup'
 echo '--------------'
@@ -193,47 +148,13 @@ echo 'Install watchman'
 echo '--------------'
 brew install watchman
 
-echo 'Install k9s kubernetes'
+echo 'Install kubernetes'
 echo '--------------'
-brew install derailed/k9s/k9s kubectl helm
-
-echo 'Install minikube'
-echo '--------------'
-brew install minikube
-
-echo 'Install localtunnel'
-echo '--------------'
-brew install localtunnel
+brew install kubectl helm kubectx
 
 echo 'Install zsh plugins: autosuggestions, autojump'
 echo '---------------------------'
 brew install zsh-autosuggestions autojump
-
-echo 'Install ddev'
-echo '---------------------------'
-brew install drud/ddev/ddev
-mkcert -install
-
-echo 'Install cocoapods'
-echo '--------------'
-sudo gem install cocoapods
-
-echo 'Install terraform'
-echo '--------------'
-brew tap hashicorp/tap
-brew install hashicorp/tap/terraform
-
-echo 'Install packer'
-echo '--------------'
-brew install hashicorp/tap/packer
-
-echo 'Install ansible'
-echo '--------------'
-brew install ansible
-
-echo 'Install Vue CLI'
-echo '--------------'
-yarn global add @vue/cli-init
 
 echo 'Install Google Fonts'
 echo '--------------'
