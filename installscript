@@ -157,6 +157,7 @@ brew install helm
 
 # Docker
 brew install docker
+brew install docker-buildx
 brew install bash-completion
 brew install docker-completion
 brew install docker-compose-completion
