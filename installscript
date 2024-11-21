@@ -148,9 +148,22 @@ echo 'Install watchman'
 echo '--------------'
 brew install watchman
 
-echo 'Install kubernetes'
+echo 'Install kubernetes cli'
 echo '--------------'
-brew install kubectl helm kubectx
+brew install kubectx
+brew install asdf
+asdf install kubectl latest
+brew install helm
+
+# Docker
+brew install docker
+brew install bash-completion
+brew install docker-completion
+brew install docker-compose-completion
+brew install docker-machine-completion
+
+# AWS command line
+brew install awscli # Official command line
 
 echo 'Install zsh plugins: autosuggestions, autojump'
 echo '---------------------------'
