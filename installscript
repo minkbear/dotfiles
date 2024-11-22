@@ -170,9 +170,9 @@ echo 'Install zsh plugins: autosuggestions, autojump'
 echo '---------------------------'
 brew install zsh-autosuggestions autojump
 
-echo 'Install Google Fonts'
-echo '--------------'
-cd ~/Library/Fonts/ && git clone https://github.com/google/fonts.git google-fonts && cd -
+# echo 'Install Google Fonts'
+# echo '--------------'
+# cd ~/Library/Fonts/ && git clone https://github.com/google/fonts.git google-fonts && cd -
 
 echo 'Install PHPCS'
 echo '--------------'
