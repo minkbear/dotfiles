@@ -7,7 +7,7 @@ ZSH_CUSTOM=$HOME/.dotfiles/misc/oh-my-zsh-custom
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="agnoster"
 
 # Hide username in prompt
 DEFAULT_USER=$(whoami)
@@ -96,7 +96,6 @@ if which rbenv >/dev/null; then eval "$(rbenv init -)"; fi
 
 # Alias hub to git
 eval "$(hub alias -s)"
-eval $(thefuck --alias)
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
