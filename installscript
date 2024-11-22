@@ -96,6 +96,8 @@ echo 'Install wrk'
 echo '-----------'
 brew install wrk
 
+brew install pwgen
+
 echo 'Install doctl'
 echo '-------------'
 brew install doctl
