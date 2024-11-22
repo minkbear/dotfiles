@@ -158,3 +158,28 @@ function scheduler() {
 function silent() {
     "$@" >&/dev/null
 }
+
+function create-mysql() {
+    
+DB=$1
+PASS=$(pwgen -s 40 1)
+TMP_USERNAME=${PASS:0:5}
+MODUSERNAME=${DB}_${TMP_USERNAME}
+
+echo ---------
+echo CREATE DATABASE IF NOT EXISTS $DB CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+echo "CREATE USER '$MODUSERNAME'@'%' IDENTIFIED BY '$PASS';"
+echo "GRANT ALL PRIVILEGES ON $DB.* TO '$MODUSERNAME'@'%';"
+echo "GRANT ALL PRIVILEGES ON $DB.* TO 'pakapol_cha'@'%';"
+echo FLUSH PRIVILEGES;
+echo "--- MYSQL 8 [OLD ENC] ---"
+echo ALTER USER \'$MODUSERNAME\'@'%' IDENTIFIED WITH mysql_native_password BY \'$PASS\';
+echo FLUSH PRIVILEGES;
+echo ---------
+
+echo "-"
+echo "DB_DATABASE=$DB"
+echo "DB_USERNAME=$MODUSERNAME"
+echo "DB_PASSWORD=$PASS"
+
+}
