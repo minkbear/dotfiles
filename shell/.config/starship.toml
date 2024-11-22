@@ -1,0 +1,63 @@
+# REFERENCE:
+# https://starship.rs/config/
+# https://www.nerdfonts.com/cheat-sheet
+
+add_newline = false
+command_timeout = 2000
+
+right_format = """$time"""
+
+[package]
+disabled = true
+
+[directory]
+style = "bold bright-blue"
+
+[git_branch]
+style = "bold bright-white"
+symbol = "󰘬 "
+
+[git_status]
+ahead = "[](purple)[$count](white)"
+behind = "[](cyan)[$count](white)"
+conflicted = '[=$count](yellow)'
+deleted = '[✘$count](bright-black)'
+diverged = "[](cyan)[$ahead_count](white)[](purple)[$behind_count](white)"
+modified = '[*$count](red)'
+renamed = "[»$count](purple)"
+staged = "[+$count](green)"
+stashed = "[\\$$count](yellow)"
+style = "bold bright-white"
+untracked = "[?$count](cyan)"
+
+[git_commit]
+only_detached = true
+style = "bright-black"
+format = "[$hash]($style) "
+
+[php]
+format = 'via [🔹 $version](147 bold) '
+
+[ruby]
+symbol = " "
+
+[nodejs]
+symbol = "󰎙 "
+
+[python]
+symbol = "󰌠 "
+
+[shell]
+disabled = false
+style = 'cyan'
+bash_indicator = '\$'
+fish_indicator = '󰈺'
+zsh_indicator = '%'
+
+[time]
+disabled = false
+format = '[󱑎 $time]($style) '
+style = "bright-black"
+
+[helm]
+format = 'via [⎈ $version](bold white) '
