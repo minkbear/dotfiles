@@ -50,6 +50,12 @@ echo install homebrew
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >>$HOME/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+echo 'Install Starship'
+echo '----------------'
+brew install starship
+rm $HOME/.config/starship.toml
+ln -s $HOME/.dotfiles/shell/.config/starship.toml $HOME/.config/starship.toml
+
 echo 'Install NVM'
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 
@@ -186,8 +192,6 @@ phpcs --config-set installed_paths ~/.dotfiles/phpcs
 echo 'Init Git'
 git config --global init.defaultBranch main
 git config --global push.default current
-#git config --global user.name "yourname"
-#git config --global user.email "yourmail"
 
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'
