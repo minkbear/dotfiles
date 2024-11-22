@@ -23,6 +23,10 @@ git config --global core.excludesfile $HOME/.global-gitignore
 rm $HOME/.zshrc
 ln -s $HOME/.dotfiles/shell/.zshrc $HOME/.zshrc
 
+# Symlink ssh config
+rm $HOME/.ssh/config
+ln -s $HOME/.dotfiles/shell/.ssh/config $HOME/.ssh/config
+
 # Symlink vim prefs
 rm $HOME/.vimrc
 ln -s $HOME/.dotfiles/shell/.vimrc $HOME/.vimrc
