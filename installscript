@@ -182,8 +182,8 @@ phpcs --config-set installed_paths ~/.dotfiles/phpcs
 echo 'Init Git'
 git config --global init.defaultBranch main
 git config --global push.default current
-#git config --global user.name "minkbear"
-#git config --global user.email "minkbear@gmail.com"
+#git config --global user.name "yourname"
+#git config --global user.email "yourmail"
 
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'
