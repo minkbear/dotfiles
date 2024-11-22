@@ -26,6 +26,14 @@ ssh-keygen -t rsa -b 2048 -C "your_email@example.com"
 
 ssh-add --apple-use-keychain ~/.ssh/id_rsa
 ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+
+GIT_AUTHOR_NAME="yourname"
+GIT_AUTHOR_EMAIL="yourmail"
+
+GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
+git config --global user.name "$GIT_AUTHOR_NAME"
+GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
+git config --global user.email "$GIT_AUTHOR_EMAIL"
 ```
 
 Feel free to create an issue on this repo if you have any questions about them.
