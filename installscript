@@ -131,13 +131,13 @@ ln -s $HOME/.dotfiles/misc/php-limits.ini /opt/homebrew/etc/php/8.3/conf.d/php-z
 echo 'Install Deployer 7'
 echo '--------------'
 curl -LO https://github.com/deployphp/deployer/releases/download/v7.5.5/deployer.phar
-mv deployer.phar /usr/local/bin/dep7
+sudo mv deployer.phar /usr/local/bin/dep7
 chmod +x /usr/local/bin/dep7
 
 echo 'Install Deployer 6'
 echo '--------------'
 curl -LO https://deployer.org/deployer.phar
-mv deployer.phar /usr/local/bin/dep
+sudo mv deployer.phar /usr/local/bin/dep
 chmod +x /usr/local/bin/dep
 
 echo 'Install mackup'
@@ -182,6 +182,8 @@ phpcs --config-set installed_paths ~/.dotfiles/phpcs
 echo 'Init Git'
 git config --global init.defaultBranch main
 git config --global push.default current
+#git config --global user.name "minkbear"
+#git config --global user.email "minkbear@gmail.com"
 
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'
