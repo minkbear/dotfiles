@@ -160,7 +160,12 @@ function silent() {
 }
 
 function create-mysql() {
-    
+
+if [ -z "$1" ]; then
+    echo -e "\n(NEED DB NAME)Please call 'create-mysql u_tax_prd' to run this command!\n"
+    exit 1
+fi
+
 DB=$1
 PASS=$(pwgen -s 40 1)
 TMP_USERNAME=${PASS:0:5}
@@ -182,4 +187,8 @@ echo "DB_DATABASE=$DB"
 echo "DB_USERNAME=$MODUSERNAME"
 echo "DB_PASSWORD=$PASS"
 
+}
+
+function app-key() {
+    echo "APP_KEY=base64:$(openssl rand -base64 32)"
 }
