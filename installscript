@@ -196,12 +196,15 @@ ln -s $HOME/.dotfiles/misc/aerospace/aerospace.toml $HOME/.config/aerospace/aero
 
 echo 'Install aws_ipadd'
 echo '--------------'
-curl -LO https://raw.githubusercontent.com/piyushsonigra/aws_ipadd/refs/heads/master/aws_ipadd
-sudo mv aws_ipadd /usr/local/bin/aws_ipadd
-chmod +x /usr/local/bin/aws_ipadd
+curl -LO https://github.com/piyushsonigra/aws_ipadd/releases/latest/download/aws_ipadd_osx_x64.tar.gz
+sudo tar -xvf aws_ipadd_osx_x64.tar.gz -C /usr/local/bin/
+rm -f aws_ipadd_osx_x64.tar.gz
 mkdir $HOME/.aws_ipadd
 rm $HOME/.aws_ipadd
 ln -s $HOME/.dotfiles/misc/aws_ipadd/aws_ipadd $HOME/.aws_ipadd/aws_ipadd
+
+# Link python3
+sudo ln -s /opt/homebrew/bin/python3 /usr/local/bin/python3
 
 echo 'Install PHPCS'
 echo '--------------'
