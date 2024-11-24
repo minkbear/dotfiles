@@ -177,6 +177,7 @@ brew install docker-machine-completion
 
 # AWS command line
 brew install awscli # Official command line
+brew install azure-cli
 
 echo 'Install zsh plugins: autosuggestions, autojump'
 echo '---------------------------'
@@ -185,6 +186,13 @@ brew install zsh-autosuggestions autojump
 # echo 'Install Google Fonts'
 # echo '--------------'
 # cd ~/Library/Fonts/ && git clone https://github.com/google/fonts.git google-fonts && cd -
+
+echo 'Install Aerospace'
+echo '--------------'
+brew install --cask nikitabobko/tap/aerospace
+mkdir $HOME/.config/aerospace
+rm $HOME/.config/aerospace/aerospace.toml
+ln -s $HOME/.dotfiles/misc/aerospace/aerospace.toml $HOME/.config/aerospace/aerospace.toml
 
 echo 'Install PHPCS'
 echo '--------------'
