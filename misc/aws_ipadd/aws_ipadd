@@ -1,6 +1,6 @@
 [ssh]
 aws_profile = default
-security_group_id = sgr-00eefa7c9d89c9196
+security_group_id = sg-0796c3fa6b5bd74c2
 protocol = TCP
 port = 22
 rule_name = my_mac_ssh
@@ -8,8 +8,8 @@ region_name = ap-southeast-1
 
 [mysql]
 aws_profile = default
-security_group_id = sg-dfg9dwe
+security_group_id = sg-0124ad2f6ad4c815b
 protocol = TCP
 port = 3306
-rule_name = my_office_mysql
+rule_name = my_mac_rds
 region_name = ap-southeast-1
