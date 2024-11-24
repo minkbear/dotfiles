@@ -11,6 +11,7 @@
 #mas install 1153157709 # SpeedTest
 #mas install 747648890  # Telegram
 mas install 425424353  # Unarchiver
+mas install 1594061654 # Navicat Premium 17
 #mas install 1147396723 # Whatsapp
 # mas install 595191960 # CopyClip
 #mas install 409201541 # Pages
