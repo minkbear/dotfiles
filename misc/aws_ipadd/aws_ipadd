@@ -1,0 +1,15 @@
+[ssh]
+aws_profile = default
+security_group_id = sgr-00eefa7c9d89c9196
+protocol = TCP
+port = 22
+rule_name = my_mac_ssh
+region_name = ap-southeast-1
+
+[mysql]
+aws_profile = default
+security_group_id = sg-dfg9dwe
+protocol = TCP
+port = 3306
+rule_name = my_office_mysql
+region_name = ap-southeast-1

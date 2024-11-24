@@ -194,6 +194,15 @@ mkdir $HOME/.config/aerospace
 rm $HOME/.config/aerospace/aerospace.toml
 ln -s $HOME/.dotfiles/misc/aerospace/aerospace.toml $HOME/.config/aerospace/aerospace.toml
 
+echo 'Install aws_ipadd'
+echo '--------------'
+curl -LO https://raw.githubusercontent.com/piyushsonigra/aws_ipadd/refs/heads/master/aws_ipadd
+sudo mv aws_ipadd /usr/local/bin/aws_ipadd
+chmod +x /usr/local/bin/aws_ipadd
+mkdir $HOME/.aws_ipadd
+rm $HOME/.aws_ipadd
+ln -s $HOME/.dotfiles/misc/aws_ipadd/aws_ipadd $HOME/.aws_ipadd/aws_ipadd
+
 echo 'Install PHPCS'
 echo '--------------'
 brew install php-code-sniffer
